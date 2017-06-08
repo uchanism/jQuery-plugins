@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+	<script type="text/javascript" src="tabPlugin.js"></script>
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+	
+	<style type="text/css">
+		/* Reset */
+		body,p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,th,td,form,fieldset,legend,input,textarea,button,select{margin:0;padding:0}
+		body,input,textarea,select,button,table{font-family:'돋움',Dotum,AppleGothic,sansserif;font-size:16px}
+		img,fieldset{border:0}
+		ul,ol{list-style:none}
+		em,address{font-style:normal}
+		a{color:#000;text-decoration:none}
+		a:hover,a:active,a:focus{text-decoration:none;}
+		
+		.tab_wrap{width:300px;margin:100px auto 0;}
+		.tab{}
+		.tab li{box-sizing:border-box;width:25%;border:1px solid #000;border-left:0;padding:5px 0;text-align:center;}
+		.tab li:first-child{border-left:1px solid #000;}
+		.tab li a{display:block;}
+		.tab .is-active{background-color:blue;font-weight:bold;color:#fff;}
+		.tab .is-active a{color:#fff;}
+		.tab_cont_group{width:300px;}
+		.tab_cont_group .tab_cont{}
+	</style>
+</head>
+<body>
+	<div class="tab_wrap">
+		<div class="tab">
+			<ul>
+				<li>
+					<a href="javascript:;">tab1</a>
+				</li>
+				<li>
+					<a href="javascript:;">tab2</a>
+				</li>
+				<li>
+					<a href="javascript:;">tab3</a>
+				</li>
+				<li>
+					<a href="javascript:;">tab4</a>
+				</li>
+			</ul>
+		</div>
+		<div class="tab_cont_group">
+			<div class="tab_cont">
+				tab1 content
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				<div class="tab">
+					<ul>
+						<li>
+							<a href="javascript:;">tab1</a>
+						</li>
+						<li>
+							<a href="javascript:;">tab2</a>
+						</li>
+						<li>
+							<a href="javascript:;">tab3</a>
+						</li>
+						<li>
+							<a href="javascript:;">tab4</a>
+						</li>
+					</ul>
+				</div>
+				<div class="tab_cont_group">
+					<div class="tab_cont">
+						tab1-1 content
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+					</div>
+					<div class="tab_cont">
+						tab1-2 content
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+					</div>
+					<div class="tab_cont">
+						tab1-3 content
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+					</div>
+					<div class="tab_cont">
+						tab1-4 content
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+					</div>
+				</div>
+			</div>
+			<div class="tab_cont">
+				tab2 content
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			</div>
+			<div class="tab_cont">
+				tab3 content
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			</div>
+			<div class="tab_cont">
+				tab4 content
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			</div>
+		</div>
+	</div>
+		
+</body>
+</html>
+<script type="text/javascript">
+;(function($){
+    $.fn.extend({
+        uiTab : function(opt){
+            var defaults = {},
+                opt = $.extend(defaults, opt);
+            
+            return this.each(function () {
+                var $base = $(this),
+                    $tab = $base.children().children(),
+                    $tabContGroup = $base.next(),
+                    $tabCont = $tabContGroup.children();
+                    
+                    $tab.css({'display':'inline-block','fontSize':'16px','verticalAlign':'middle'}).parent().css('fontSize','0');
+
+                var app = {
+                    init : function(){
+                    	$tab.siblings().removeClass('is-active');
+                    	$tab.eq(0).addClass('is-active');
+ 				
+ 				$tabContGroup.children().hide()
+ 				$tabCont.eq(0).show();
+
+                        app.toggle($base);
+                    },
+                    toggle : function(selector) {
+ 				$tab.on('click, focusin', function() {
+ 					var  $that = $(this),
+ 						$idx = $that.index();
+
+
+ 					$that.closest(selector).children().children().siblings().removeClass('is-active');
+ 					$that.addClass('is-active');
+
+ 					$tabContGroup.children().hide();
+ 					$tabContGroup.children().eq($idx).show();
+
+
+ 				});
+                    }
+                }
+                app.init($base);
+            });
+        }
+    });
+})($)
+
+$(document).ready(function(){
+	$('.tab').uiTab();
+});
+
+</script>
