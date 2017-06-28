@@ -3,13 +3,12 @@
 <head>
 	<title></title>
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
-	<script type="text/javascript" src="tabPlugin.js"></script>
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
 	
 	<style type="text/css">
 		/* Reset */
 		body,p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,th,td,form,fieldset,legend,input,textarea,button,select{margin:0;padding:0}
-		body,input,textarea,select,button,table{font-family:'돋움',Dotum,AppleGothic,sansserif;font-size:16px}
+		body,input,textarea,select,button,table{font-family::’돋움’,Dotum,AppleGothic,sansserif;font-size:16px}
 		img,fieldset{border:0}
 		ul,ol{list-style:none}
 		em,address{font-style:normal}
@@ -161,24 +160,21 @@
                     	$tab.siblings().removeClass('is-active');
                     	$tab.eq(0).addClass('is-active');
  				
- 				$tabContGroup.children().hide()
- 				$tabCont.eq(0).show();
+				$tabContGroup.children().hide()
+				$tabCont.eq(0).show();
 
                         app.toggle($base);
                     },
                     toggle : function(selector) {
- 				$tab.on('click, focusin', function() {
- 					var  $that = $(this),
- 						$idx = $that.index();
+                    	$tab.on('click touchstart', function() {
+                    		var  $that = $(this),
+                    			$idx = $that.index();
 
+                    			$that.closest(selector).children().children().siblings().removeClass('is-active');
+                    			$that.addClass('is-active');
 
- 					$that.closest(selector).children().children().siblings().removeClass('is-active');
- 					$that.addClass('is-active');
-
- 					$tabContGroup.children().hide();
- 					$tabContGroup.children().eq($idx).show();
-
-
+                    			$tabContGroup.children().hide();
+                    			$tabContGroup.children().eq($idx).show();
  				});
                     }
                 }
