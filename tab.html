@@ -144,24 +144,43 @@
 ;(function($){
     $.fn.extend({
         uiTab : function(opt){
-            var defaults = {},
-                opt = $.extend(defaults, opt);
+            var defaults = {
+            	random : false
+            },
+            	opt = $.extend(defaults, opt);
             
             return this.each(function () {
                 var $base = $(this),
                     $tab = $base.children().children(),
                     $tabContGroup = $base.next(),
-                    $tabCont = $tabContGroup.children();
+                    $tabCont = $tabContGroup.children(),                    
+                    random = opt.random,
+                    tabLeng = $tab.length;
+
+                    // if(random){
+                    // 	console.log('in');
+                    // var tabLeng = $tab.length,
+                    // 	ranNum = app.ranNum();
+                    // }
                     
                     $tab.css({'display':'inline-block','fontSize':'16px','verticalAlign':'middle'}).parent().css('fontSize','0');
 
                 var app = {
                     init : function(){
-                    	$tab.siblings().removeClass('is-active');
-                    	$tab.eq(0).addClass('is-active');
- 				
-				$tabContGroup.children().hide()
-				$tabCont.eq(0).show();
+                    	var ranNum = app.ranNum();
+                    	
+                    	var act = function(ranNum){
+                    			var idx  = ranNum ? ranNum : 0 ;
+
+                    			$tab.removeClass('is-active');
+			                	$tab.eq(idx).addClass('is-active');
+							
+						$tabContGroup.children().hide()
+						$tabCont.eq(idx).show();
+                    	}
+
+                    	random ? act(ranNum) : act()
+
 
                         app.toggle($base);
                     },
@@ -176,6 +195,10 @@
                     			$tabContGroup.children().hide();
                     			$tabContGroup.children().eq($idx).show();
  				});
+                    },
+                    ranNum : function(){
+                    	var ranNum = Math.floor(Math.random() * tabLeng);
+                    	return ranNum;
                     }
                 }
                 app.init($base);
@@ -185,7 +208,9 @@
 })($)
 
 $(document).ready(function(){
-	$('.tab').uiTab();
+	$('.tab').uiTab({
+		random :true
+	});
 });
 
 </script>
